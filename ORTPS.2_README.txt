@@ -1,0 +1,45 @@
+ORTPS Script
+Author: Clayton Brimm
+8/8/17
+FOR ARCPY REFERENCE: http://pro.arcgis.com/en/pro-app/arcpy/main/arcgis-pro-arcpy-reference.htm 
+
+
+OVERVIEW
+
+This script automates the creation of the ORTPS table and the specific county tables from a input csv. 
+
+
+SETUP
+
+To run this script right click on the python file and select EDIT WITH IDLE or use your preferred python IDE (Interactive Development Environment). Once the IDE loads edit 
+the Path variable to reflect the pathway needed to access the RG_16.csv or equivalent file. Once the variable is edited you should be able to run the module/file from the 
+IDE. The Command Line Interface display will display an option for naming the ORTPS output name and will also ask if other fields need to be entered. After this the script 
+should run automatically and will not require any other input. 
+
+
+METHOD BREAKDOWN
+
+main()
+This method is the main control of the script. It defines global variables used for creating new fields and it defines some variables for pathnaming. There are a number of
+while statements and user input sections here that help define what methods are called and when. This method is used to execute other methods and then print out diagnostics
+of these methods. 
+
+createGDB()
+This method creates the new GDB based off the gdb name variables that either were defaulted or manually entered. It will first check if the gdb exist and if it does it will
+delete it and everything in it. This method relies on arcpy functions
+
+table2Table()
+This method will transfer the data from the raw input file to the new ORTPS table. This method relies on arcpy functions. 
+
+addFields()
+This method adds fields that were not included in the original raw input file to the ORTPS file. If you do not want to enter new fields in the CLI (Command Line Interface)
+you can edit this method with your new desired fields. This method relies on arcpy funcitons. 
+
+calculateFields()
+This method will edit data and populate the newly entered fields. This method relies on arcpy functions. 
+
+countyTables()
+This method will take the newly created ORTPS table and dynamically create new tables based off the county data. The countyArray variable contains the counties with actual
+ORTPS data. This mothod relies on some arcpy functions.
+
+
