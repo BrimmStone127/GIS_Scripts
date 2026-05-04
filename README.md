@@ -1,6 +1,6 @@
 # GIS_Scripts
 
-Tools for processing geographic data used in PlanetGame.
+Tools for processing geographic data.
 
 ---
 
@@ -8,7 +8,7 @@ Tools for processing geographic data used in PlanetGame.
 
 ### `elevation_tools/`
 
-Converts USGS GeoTIFF elevation data to CSV for use in PlanetGame's terrain system.
+Converts USGS GeoTIFF elevation data to CSV for use in terrain system.
 
 **Script:** `elevation_converter.py`
 
@@ -48,7 +48,7 @@ pip install rasterio numpy requests Pillow
 
 ---
 
-## Terrain Geographic Bounds (St. Louis / Cahokia)
+## Terrain Geographic Bounds
 
 | Edge   | Value               |
 |--------|---------------------|
@@ -61,4 +61,4 @@ pip install rasterio numpy requests Pillow
 | dx/dy  | ~0.000278°/px (~30m)|
 
 These bounds are embedded in `USGS_stlouis.tif` and are the reference for
-aligning any additional data layers (water, vegetation, etc.) to the game map.
+aligning any additional data layers
