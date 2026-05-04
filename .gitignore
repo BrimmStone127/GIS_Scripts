@@ -1,0 +1,22 @@
+# Large GIS data files — download from source, do not commit
+# See README.md for data sources and bounds
+
+# Downloaded GIS data directories — large source files, not committed
+# Re-download from USGS National Map; see README.md for bounds and sources
+elevation_tools/elevation_tifs/
+elevation_tools/elevation_csvs/
+
+# Cached Overpass API responses (regeneratable via generate_water_mask.py --save-geojson)
+water_mask/water_data.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+*.egg-info/
+
+# OS
+.DS_Store
+Thumbs.db
